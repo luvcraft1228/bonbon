@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
-   
+   <link
       rel="shortcut icon"
       href="./images/candy.ico"
       type="image/x-icon"
@@ -15,21 +15,24 @@
   <body>
     <header><h1>Candy Shop : La machine à bonbons!</h1></header>
     <div class="menuTemp">
-        <button id="temp" value="2">2$</button>
-        <button id="temp" value='1'>1$</button>
-        <button id="temp" value='0.25'>25c</button>
-        <button id="temp" value='0.1'>10c</button>
-        <button id="temp" value='0.5'>5c</button>
+      <div class="boutons">
+        <button id="temp" value="2"><img src="./images/5cent-final.png" alt=""></button>
+        <button id="temp" value='1'><img src="./images/10cent-final.png" alt=""></button>
+        <button id="temp" value='0.25'><img src="./images/25cent-final.png" alt=""></button>
+        <button id="temp" value='0.1'><img src="./images/1dollard-finale.png" alt=""></button>
+        <button id="temp" value='0.5'><img src="./images/2dollard-finale.png" alt=""></button>
+      </div>
+      <div class="inputs">
         <input type="text" id="monnaie" readonly><label for="monnaie">Monnaie</label>
         <input type="text" id="chute" readonly><label for="monnaie">Chute</label>
         <input type="text" id="retour" readonly><label for="monnaie">Retour</label>
-
+      </div>
     </div>
     <div class="container">
       
       <div class="machine">
           
-        <img src="./images/Template-20machines.png" usemap="#image-map">
+        <img src="./images/Template-20machines-final.png" usemap="#image-map">
 
         <map name="image-map">
             <area  coords="677,194,744,294" shape="rect">

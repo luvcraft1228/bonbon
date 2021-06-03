@@ -23,7 +23,37 @@ header {
 }
 
 .machine img map {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100vh;
+}
+
+.menuTemp {
+  color: white;
   display: flex;
   flex-flow: row nowrap;
-  height: 100vh;
+  justify-content: center;
 }
+
+.boutons {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 15rem 5rem 1rem 5rem;
+}
+
+.inputs {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 15rem 5rem 1rem 5rem;
+}
+
+.boutons img {
+  max-width: 100px;
+}
+
+button {
+  background: url(./images/background.jpg) center center;
+  background-size: cover;
+  border: none;
+}
+
