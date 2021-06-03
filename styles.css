@@ -5,7 +5,7 @@
 }
 
 body {
-  background: url(/Projet-QA/images/background.jpg) center center;
+  background: url(./images/background.jpg) center center;
   background-size: cover;
 }
 
