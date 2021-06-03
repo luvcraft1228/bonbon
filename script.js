@@ -25,7 +25,13 @@ mapArea.addEventListener("click", function(event){
     
     return false;
 })
+/* initialisation des boutons monnaies */
 
+const buttons = document.querySelectorAll("#temp");
+buttons.forEach(button => button.addEventListener('click', addMoney))
+
+
+/*fonctions */
 function clickBonbon(element)
 {
     console.log(element.id);
@@ -50,4 +56,8 @@ function ShowName(candy){
 
 function GetQty(candy){
     console.log(candy.qty);
+}
+
+function addMoney(){
+    console.log(this.value);
 }
