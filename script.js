@@ -25,21 +25,32 @@ mapArea.addEventListener("click", function(event){
     
     return false;
 })
-/* initialisation des boutons monnaies */
+/* initialisation des boutons monnaies et menu */
 
 const buttons = document.querySelectorAll("#temp");
 buttons.forEach(button => button.addEventListener('click', addMoney))
+const inputs = document.querySelectorAll("input");
+const monnaie = inputs[0];
+const chute = inputs[1];
+const retour = inputs[2];
+chute.value=""
+monnaie.value=0;
+retour.value=0;
 
+retour.addEventListener("click", resetInputs);
 
 /*fonctions */
 function clickBonbon(element)
 {
     console.log(element.id);
     let activeCandy = getCandyById(element.id);
+    buyCandy(activeCandy);
     ShowName(activeCandy);
     ShowPrice(activeCandy);
     GetQty(activeCandy);
+    
 }
+
 
 function getCandyById(id){
     return candiesObject.find(candy => candy.id == id);
@@ -59,5 +70,34 @@ function GetQty(candy){
 }
 
 function addMoney(){
-    console.log(this.value);
+    let monnaieInt = +monnaie.value;
+    monnaieInt+=(+this.value);
+    monnaie.value = monnaieInt;
+}
+
+function buyCandy(candy){
+    let montant = +monnaie.value;
+    if(candy.price <= montant){
+       if(checkQty(candy)) 
+        chute.value=candy.name;
+        retour.value = montant - candy.price;
+    }else{
+        alert(`Le prix des ${candy.name} est de ${candy.price}$. Veuillez entrer plus d'argent`);
+    }
+}
+
+function checkQty(candy){
+    if(candy.qty>0){
+      candy.qty--;
+        return true;  
+    } 
+    else {
+        alert("plus de stock, desole");
+        return false;
+    }
+}
+function resetInputs(){
+    chute.value = "";
+    monnaie.value = 0;
+    retour.value = 0;
 }

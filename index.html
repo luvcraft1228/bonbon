@@ -14,11 +14,17 @@
   </head>
   <body>
     <header><h1>Candy Shop : La machine à bonbons!</h1></header>
-    <button id="temp" value=2>2$</button>
-      <button id="temp" value=1>1$</button>
-      <button id="temp" value=0.25>25c</button>
-      <button id="temp" value=0.1>10c</button>
-      <button id="temp" value=0.5>5c</button>
+    <div class="menuTemp">
+        <button id="temp" value="2">2$</button>
+        <button id="temp" value='1'>1$</button>
+        <button id="temp" value='0.25'>25c</button>
+        <button id="temp" value='0.1'>10c</button>
+        <button id="temp" value='0.5'>5c</button>
+        <input type="text" id="monnaie" readonly><label for="monnaie">Monnaie</label>
+        <input type="text" id="chute" readonly><label for="monnaie">Chute</label>
+        <input type="text" id="retour" readonly><label for="monnaie">Retour</label>
+
+    </div>
     <div class="container">
       
       <div class="machine">
